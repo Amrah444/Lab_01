@@ -1,0 +1,85 @@
+object DiskAreaCalculator {
+  def areaOfDisk(radius: Double): Double = {
+    val Pi = 3.141592653589793
+    Pi * radius * radius
+  }
+
+  def main(args: Array[String]): Unit = {
+    val radius = 5
+    val area = areaOfDisk(radius)
+    println(s"The area of a disk with radius $radius is $area")
+  }
+}
+
+.........................................................................................................................................................
+
+object TemperatureConverter {
+  def celsiusToFahrenheit(celsius: Double): Double = {
+    celsius * 1.8 + 32.0
+  }
+
+  def main(args: Array[String]): Unit = {
+    val celsius = 35
+    val fahrenheit = celsiusToFahrenheit(celsius)
+    println(s"$celsius°C is equivalent to $fahrenheit°F")
+  }
+}
+
+................................................................................................................................
+object SphereVolumeCalculator {
+  def volumeOfSphere(radius: Double): Double = {
+    val Pi = 3.141592653589793
+    (4.0 / 3.0) * Pi * Math.pow(radius, 3)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val radius = 5
+    val volume = volumeOfSphere(radius)
+    println(s"The volume of a sphere with radius $radius is $volume")
+  }
+}
+
+...................................................................................................................................
+object BookWholesaleCostCalculator {
+  def totalWholesaleCost(copies: Int): Double = {
+    val coverPrice = 24.95
+    val discount = 0.4
+    val discountedPrice = coverPrice * (1 - discount)
+    val shippingCost = if (copies <= 50) {
+      3.0
+    } else {
+      3.0 + (copies - 50) * 0.75
+    }
+    discountedPrice * copies + shippingCost
+  }
+
+  def main(args: Array[String]): Unit = {
+    val copies = 60
+    val totalCost = totalWholesaleCost(copies)
+    println(s"The total wholesale cost for $copies copies is Rs. $totalCost")
+  }
+}
+
+..................................................................................................................................
+object RunningTimeCalculator {
+  def main(args: Array[String]): Unit = {
+    // Distances and paces
+    val easyPaceDistance1 = 2 // in km
+    val easyPaceDistance2 = 2 // in km
+    val tempoPaceDistance = 3 // in km
+
+    val easyPaceTimePerKm = 8 // in minutes per km
+    val tempoPaceTimePerKm = 7 // in minutes per km
+
+    // Calculate the time for each segment
+    val easyPaceTime1 = easyPaceDistance1 * easyPaceTimePerKm
+    val tempoPaceTime = tempoPaceDistance * tempoPaceTimePerKm
+    val easyPaceTime2 = easyPaceDistance2 * easyPaceTimePerKm
+
+    // Calculate the total running time
+    val totalRunningTime = easyPaceTime1 + tempoPaceTime + easyPaceTime2
+
+    // Output the total running time
+    println(s"The total running time is $totalRunningTime minutes")
+  }
+}
