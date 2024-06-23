@@ -1,0 +1,14 @@
+Java
+An object-oriented programming language.
+Emphasizes the use of classes and objects.
+Supports imperative programming.
+Statically typed with explicit type declarations.
+Introduced functional programming features like lambdas and the Stream API in Java 8.
+
+
+Scala
+A hybrid language that combines object-oriented and functional programming.
+Encourages immutability and functional constructs such as first-class functions, higher-order functions, and pattern matching.
+Supports both imperative and declarative programming styles.
+Statically typed with a more advanced type system.
+Designed with functional programming in mind from the ground up.
